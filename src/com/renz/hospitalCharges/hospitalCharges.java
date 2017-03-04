@@ -16,7 +16,7 @@ public class hospitalCharges {
 			 
 		
 			
-			 	while(patient.equals("Yes")|| patient.equals("yes") || patient.equals("Y") || patient.equals("y")){
+			 	while(patient.equalsIgnoreCase("yes")|| patient.equalsIgnoreCase("y")){
 				 //add patient number by 1
 				 ptNo+=1;
 				 // Ask the user if he will stay overnight
@@ -26,17 +26,19 @@ public class hospitalCharges {
 				 double overnightCharge, medicationCharge, labServiceCharge ;
 				 	
 				 	// If user's Answer is not Yes or No 
-				 	while(!overnight.equals("yes") && !overnight.equals("Yes") && !overnight.equals("y") && !overnight.equals("Y") && !overnight.equals("No") && !overnight.equals("no") && !overnight.equals("N") &&!overnight.equals("n") ){
+				 	while(!overnight.equalsIgnoreCase("yes") && !overnight.equalsIgnoreCase("y") && 
+				 			!overnight.equalsIgnoreCase("no") && !overnight.equalsIgnoreCase("n") ){
 				 		System.out.print("Invalid choices ,Please type [Yes/No]");
 				 		overnight = in.next();
 				 		//add extra space if valid input
-				 		if (overnight.equals("Yes")|| overnight.equals("yes") || overnight.equals("Y") || overnight.equals("y") || overnight.equals("No")||overnight.equals("no") ||overnight.equals("N") || overnight.equals("n")){
+				 		if (overnight.equalsIgnoreCase("yes")|| overnight.equalsIgnoreCase("y")  || 
+				 				overnight.equalsIgnoreCase("no") ||overnight.equalsIgnoreCase("n") ){
 				 			System.out.println();
 				 		}
 				 	}
 				 	
 				 	//if the user Staying for overnight the ask the following input :
-				 	if (overnight.equals("yes") || overnight.equals("Yes") || overnight.equals("Y") || overnight.equals("y")){
+				 	if (overnight.equalsIgnoreCase("yes") ||  overnight.equalsIgnoreCase("y")){
 				 		System.out.println("Enter the following Charges for Patient "+ptNo);
 				 		System.out.print("Overnight:");
 				 		overnightCharge = in.nextDouble();
@@ -64,11 +66,13 @@ public class hospitalCharges {
 				 	System.out.println();
 				 	
 					// If user's Answer is not Yes or No 
-				 	while(!patient.equals("yes") && !patient.equals("Yes") && !patient.equals("y") && !patient.equals("Y") && !patient.equals("No") && !patient.equals("no") && !patient.equals("N") &&!patient.equals("n")){
+				 	while(!patient.equalsIgnoreCase("yes") && !patient.equalsIgnoreCase("y")  &&
+				 			 !patient.equalsIgnoreCase("no") &&!patient.equalsIgnoreCase("n")){
 				 		System.out.print("Invalid choices ,Please type [Yes/No]");
 				 		patient = in.next();
 				 		//add extra space if valid input
-				 		if (patient.equals("Yes")|| patient.equals("yes") || patient.equals("Y") || patient.equals("y") || patient.equals("No")|| patient.equals("no") || patient.equals("N") || patient.equals("n")){
+				 		if ( patient.equalsIgnoreCase("yes") ||  patient.equalsIgnoreCase("y") || 
+				 				 patient.equalsIgnoreCase("no") ||  patient.equalsIgnoreCase("n")){
 				 			System.out.println();
 				 		}
 				 	}
